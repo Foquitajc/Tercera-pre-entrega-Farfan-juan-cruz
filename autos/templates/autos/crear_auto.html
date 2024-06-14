@@ -1,0 +1,8 @@
+<!-- autos/templates/autos/crear_auto.html -->
+
+<h2>Crear Nuevo Auto</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Guardar Auto</button>
+</form>

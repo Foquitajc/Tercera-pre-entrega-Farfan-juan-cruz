@@ -1,0 +1,20 @@
+<!-- autos/templates/autos/index.html -->
+
+<h1>Página Principal de Autos</h1>
+
+<h2>Marcas:</h2>
+<ul>
+    {% for marca in marcas %}
+        <li>{{ marca.nombre }}</li>
+    {% endfor %}
+</ul>
+
+<h2>Autos:</h2>
+<ul>
+    {% for auto in autos %}
+        <li>{{ auto.marca }} - {{ auto.modelo }} ({{ auto.año }})</li>
+    {% endfor %}
+</ul>
+
+<a href="{% url 'crear_marca' %}">Crear Nueva Marca</a><br>
+<a href="{% url 'crear_auto' %}">Crear Nuevo Auto</a>
